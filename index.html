@@ -27,7 +27,7 @@
             -webkit-user-select: none;
         }
 
-        /* --- INTERACTIVE NOOR (GLOW) - Placed high to show over gate --- */
+        /* --- INTERACTIVE NOOR (GLOW) --- */
         #interactive-glow {
             position: fixed;
             top: 0; left: 0;
@@ -293,7 +293,7 @@
         .pulse-effect { animation: subtlePulse 1s ease-out; }
         @keyframes subtlePulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
 
-        /* --- CONTACT SECTION --- */
+        /* --- CONTACT SECTION STYLES --- */
         .contact-card {
             background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(12px);
@@ -355,6 +355,11 @@
     <div id="interactive-glow"></div>
     <div class="body-background-pattern"></div>
     <div class="petal-container" id="petal-container"></div>
+
+    <!-- AUDIO ELEMENT: Replace 'your-audio-file.mp3' with your local filename -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="Rabab.mp3" type="audio/mp3">
+    </audio>
 
     <!-- LANGUAGE GATE -->
     <div id="language-gate">
@@ -433,11 +438,12 @@
             </div>
         </section>
 
-        <!-- FAMILIES -->
+        <!-- FAMILIES SECTION -->
         <section id="details" class="py-6 border-t border-[#d4af37]/10 reveal">
             <div class="grid md:grid-cols-2 gap-4">
+                <!-- Groom side -->
                 <div class="text-center space-y-2 p-2">
-                    <p class="text-[10px] text-[#d4af37] tracking-widest uppercase font-black" data-en="THE GROOM" data-hi="नूरचश्म">THE GROOM</p>
+                    <p class="text-[10px] font-bold text-[#d4af37] uppercase tracking-widest" data-en="THE GROOM" data-hi="नूरचश्म">THE GROOM</p>
                     <h4 class="text-2xl font-bold signature text-[#8b0000]" data-en="Mohammed-Irshad Ansari" data-hi="मोहम्मद-इरशाद अंसारी">Mohammed-Irshad Ansari</h4>
                     <div class="p-3 bg-white border-y border-[#d4af37]/10 rounded-xl shadow-sm">
                         <p class="text-[9px] text-[#d4af37] uppercase font-black mb-0.5" data-en="son of" data-hi="बिन">son of</p>
@@ -445,8 +451,9 @@
                         <p class="text-sm text-[#a52a2a] italic serif-font" data-en="& Mrs. Nasibun-Nesha" data-hi="एवं मोहतरमा नसीबुन-निशा">& Mrs. Nasibun-Nesha</p>
                     </div>
                 </div>
+                <!-- Bride side -->
                 <div class="text-center space-y-2 p-2">
-                    <p class="text-[10px] text-[#d4af37] tracking-widest uppercase font-black" data-en="THE BRIDE" data-hi="नूरचश्मी">THE BRIDE</p>
+                    <p class="text-[10px] font-bold text-[#d4af37] uppercase tracking-widest" data-en="THE BRIDE" data-hi="नूरचश्मी">THE BRIDE</p>
                     <h4 class="text-2xl font-bold signature text-[#8b0000]" data-en="Noor-Jahan Khatoon" data-hi="नूरजहाँ खातून">Noor-Jahan Khatoon</h4>
                     <div class="p-3 bg-white border-y border-[#d4af37]/10 rounded-xl shadow-sm">
                         <p class="text-[9px] text-[#d4af37] uppercase font-black mb-0.5" data-en="daughter of" data-hi="बिनते">daughter of</p>
@@ -466,7 +473,7 @@
             </div>
         </section>
 
-        <!-- ITINERARY -->
+        <!-- ITINERARY SECTION -->
         <section id="events" class="py-4 border-t border-[#d4af37]/10 reveal">
             <div class="grid md:grid-cols-2 gap-4 px-1">
                 <div class="p-5 bg-white border border-[#d4af37]/10 rounded-3xl text-center space-y-2 shadow-sm">
@@ -486,20 +493,20 @@
         <section id="contact" class="py-12 border-t border-[#d4af37]/10 text-center px-4 reveal">
             <p class="text-xs md:text-sm text-[#d4af37] tracking-widest uppercase font-black mb-8" data-en="CONTACT FOR INQUIRIES" data-hi="संपर्क सूत्र">CONTACT FOR INQUIRIES</p>
             <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <!-- Groom Side Contact -->
+                <!-- Groom Side Contact (Barati) -->
                 <div class="contact-card">
                     <p class="text-[10px] font-bold text-[#d4af37] uppercase tracking-widest" data-en="Groom's Side" data-hi="बराती">Groom's Side</p>
                     <h4 class="text-xl font-bold text-[#8b0000] serif-font" data-en="Mr. Sarajuddin Ansari" data-hi="जनाब सरजुद्दीन अंसारी">Mr. Sarajuddin Ansari</h4>
-                    <p class="phone-display">+91 97650 72598</p>
+                    <p class="phone-display">+91 97650 72591</p>
                     <div class="contact-actions flex gap-2">
-                        <a href="tel:+919765072598" class="contact-btn"><i data-lucide="phone" class="w-3.5 h-3.5"></i><span data-en="Call" data-hi="कॉल">Call</span></a>
+                        <a href="tel:+919765072591" class="contact-btn"><i data-lucide="phone" class="w-3.5 h-3.5"></i><span data-en="Call" data-hi="कॉल">Call</span></a>
                         <button onclick="copyToClipboard('+919765072591', this)" class="contact-btn secondary"><i data-lucide="copy" class="w-3.5 h-3.5"></i><span data-en="Copy" data-hi="कॉपी">Copy</span></button>
                     </div>
                 </div>
-                <!-- Bride Side Contact -->
+                <!-- Bride Side Contact (Gharati) -->
                 <div class="contact-card">
                     <p class="text-[10px] font-bold text-[#d4af37] uppercase tracking-widest" data-en="Bride's Side" data-hi="घराती">Bride's Side</p>
-                    <h4 class="text-xl font-bold text-[#8b0000] serif-font" data-en="Mr. Riyajuddin Ansari" data-hi="जनाब रियाजुद्दीन अंसारी">Mr. Riyajuddin Ansari</h4>
+                    <h4 class="text-xl font-bold text-[#8b0000] serif-font" data-en="Mr. Riyajuddin Ansari" data-hi="जनाब रियाजुद्दीन अंसारी">Mr. Riyajuddin अंसारी</h4>
                     <p class="phone-display">+91 00000 00000</p>
                     <div class="contact-actions flex gap-2">
                         <a href="tel:+910000000000" class="contact-btn"><i data-lucide="phone" class="w-3.5 h-3.5"></i><span data-en="Call" data-hi="कॉल">Call</span></a>
@@ -509,7 +516,7 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
+        <!-- FOOTER SECTION -->
         <footer class="py-10 text-center border-t border-[#d4af37]/15 px-4 reveal">
             <i data-lucide="heart" class="w-10 h-10 mx-auto text-[#d4af37] fill-current animate-pulse mb-3 opacity-50"></i>
             <h2 class="text-3xl md:text-5xl font-bold text-[#8b0000] signature tracking-tight" data-en="Seeking Your Blessings" data-hi="आपकी दुआओं के तलबगार">Seeking Your Blessings</h2>
@@ -521,7 +528,7 @@
     </main>
 
     <script>
-        // Disable Inspect Element
+        // Disable Inspect Element Shortcut Keys
         document.addEventListener('keydown', function(e) {
             if (e.keyCode == 123) return false;
             if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 67)) return false;
@@ -531,7 +538,7 @@
         lucide.createIcons();
         let currentLang = 'en';
 
-        // --- INTERACTIVE GLOW ---
+        // --- INTERACTIVE GLOW (MOUSE & TOUCH) ---
         const updateGlow = (e) => {
             const x = e.clientX || (e.touches && e.touches[0].clientX);
             const y = e.clientY || (e.touches && e.touches[0].clientY);
@@ -548,6 +555,14 @@
             en: { groom: "Mohammed-Irshad Ansari", bride: "Noor-Jahan Khatoon", amp: "&", guests: ["Nizamuddin Elahi-miya Ansari", "Mohammed barkat sarajuddin Ansari", "Mohammed ayan barkat Ansari", "Mohammed Arman barkat Ansari", "Mohammed Raees Nizamuddin Ansari", "Moahmmed Sahil Raees Ansari", "Mohammed Alfaz Nizamuddin Ansari"] },
             hi: { groom: "मोहम्मद-इरशाद अंसारी", bride: "नूरजहाँ खातून", amp: "हमराह", guests: ["निज़ामुद्दीन इलाही-मियाँ अन्सारी", "मोहम्मद बरकत सरजुद्दीन अन्सारी", "मोहम्मद अयान बरकत अन्सारी", "मोहम्मद अरमान बरकत अन्सारी", "मोहम्मद रईस निज़ामुद्दीन अन्सारी", "मोहम्मद साहिल रईस अन्सारी", "मोहम्मद अल्फ़ाज़ निज़ामुद्दीन अन्सारी"] }
         };
+
+        // --- AUDIO TRIGGER ---
+        function startMusic() {
+            const audio = document.getElementById('bg-music');
+            if(audio) {
+                audio.play().catch(error => { console.log("Audio playback deferred"); });
+            }
+        }
 
         function copyToClipboard(text, btn) {
             const input = document.createElement('input');
@@ -640,6 +655,7 @@
 
         function setInitialLang(lang) {
             currentLang = lang; updateUI(); 
+            startMusic(); 
             document.getElementById('language-gate').classList.add('hidden-gate');
             document.getElementById('main-nav').style.opacity = '1';
             document.getElementById('invitation-card').classList.add('visible');
